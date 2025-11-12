@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Scholles - AI Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sticky-nav">
+        <div class="nav-center">
+            <a href="index.html" class="nav-icon" aria-label="Home" data-tooltip="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2.5 11.75L11.63 3.2a.75.75 0 0 1 .98 0l9.14 8.55"></path>
+                    <path d="M5 10.25V21h5.5v-5.5h3V21H19V10.25"></path>
+                </svg>
+            </a>
+            <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="GitHub" data-tooltip="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/bruno-scholles/" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="LinkedIn" data-tooltip="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            <a href="publications.html" class="nav-icon" aria-label="Publications" data-tooltip="Publications">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+            </a>
+            <a href="photography.html" class="nav-icon" aria-label="Photography" data-tooltip="Photography">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <aside class="sidebar-nav">
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Technical Skills</a>
+        <a href="#experience">Professional Experience</a>
+        <a href="#contact">Contact</a>
+    </aside>
+
+    <main class="terminal-container">
+        <section class="terminal-box" id="about">
+            <div class="terminal-title-bar">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-body">
+                <div class="profile-layout">
+                    <div class="profile-photo-square">
+                        <img src="profile.jpg" alt="Bruno Scholles">
+                    </div>
+                    <div class="profile-text">
+                        <div class="profile-line">Bruno Scholles</div>
+                        <div class="profile-line">AI Engineer</div>
+                        <div class="profile-line">M.Sc. in Computer Vision – Faculty of Engineering of the University of Porto</div>
+                        <div class="profile-line">Based in Portugal 🇵🇹</div>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
+                <h2 class="section-title">About Me</h2>
+                <p class="bio-text" id="bio-text"></p>
+                <span class="cursor-block" id="cursor">█</span>
+            </div>
+        </section>
+
+        <section class="terminal-box" id="education">
+            <div class="terminal-title-bar">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-body">
+                <h2 class="section-title">Education</h2>
+                <ul class="terminal-list">
+                    <li>
+                        <img src="Icons/Feup_Logo.png" alt="University of Porto logo" class="list-icon">
+                        <span>M.Sc. in Computer Vision, University of Porto (FEUP)</span>
+                    </li>
+                    <li>
+                        <img src="Icons/UnB_Logo.png" alt="University of Brasília logo" class="list-icon">
+                        <span>B.Sc. in Communication Networks Engineering, University of Brasília (UnB)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="terminal-box" id="skills">
+            <div class="terminal-title-bar">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-body">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skills-card">
+                        <h3 class="skills-heading">AI &amp; Computer Vision</h3>
+                        <ul class="skills-list">
+                            <li>Python (PyTorch, Transformers, Keras, TensorFlow, Scikit-learn, OpenCV, Flask, FastAPI, Scikit-video, Pandas, GeoPandas, Rasterio, Shapely, PyShp, Hugging Face)</li>
+                            <li>Image Processing</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Deep Learning</li>
+                            <li>Generative AI</li>
+                            <li>Small Language Models (SLMs)</li>
+                            <li>Large Language Models (LLMs)</li>
+                            <li>Fine-tuning</li>
+                            <li>AI Agents</li>
+                            <li>Machine Learning</li>
+                        </ul>
+                    </div>
+                    <div class="skills-card">
+                        <h3 class="skills-heading">Data &amp; Engineering Tools</h3>
+                        <ul class="skills-list">
+                            <li>Docker</li>
+                            <li>Spark</li>
+                            <li>AWS</li>
+                            <li>SQL</li>
+                            <li>MySQL</li>
+                            <li>3D Slicer</li>
+                            <li>Google Earth Engine</li>
+                            <li>QGIS</li>
+                            <li>Kubernetes</li>
+                            <li>Microsoft Office</li>
+                            <li>Data Pipelines and ETL</li>
+                            <li>Big Data Management</li>
+                        </ul>
+                    </div>
+                    <div class="skills-card">
+                        <h3 class="skills-heading">Programming &amp; Systems</h3>
+                        <ul class="skills-list">
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>MatLab</li>
+                            <li>Rust</li>
+                            <li>API Development</li>
+                            <li>Automation Scripts</li>
+                            <li>Web Applications (Flask, FastAPI)</li>
+                            <li>Cloud Deployment</li>
+                            <li>Containerization and CI/CD</li>
+                        </ul>
+                    </div>
+                    <div class="skills-card">
+                        <h3 class="skills-heading">Soft Skills</h3>
+                        <ul class="skills-list">
+                            <li>Leadership experience in research groups</li>
+                            <li>Strong adaptability to change</li>
+                            <li>Excellent communication and problem-solving skills</li>
+                            <li>Enjoy working in multidisciplinary and collaborative environments</li>
+                            <li>Team-oriented mindset with high reliability and initiative</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="terminal-box" id="experience">
+            <div class="terminal-title-bar">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-body">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>AI Engineer — Associação GigaCandanga</strong>
+                        <a href="https://github.com/BrunoScholles98/GigaSistemica-Advancing-Systemic-Health-Diagnostics-through-AI" target="_blank" class="gh-link" title="GitHub" aria-label="View project on GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3.0-.4 1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="exp-meta">Brasília, Brazil · Remote · Mar 2023 – Present</div>
+                    <p class="exp-desc">GigaSistêmica is a collaborative initiative between GigaCandanga and the University of Brasília that leverages AI for early detection and systemic efficiency in health diagnostics through dental imaging.</p>
+                    <ul class="exp-list">
+                        <li>Lead and mentor a team of Data Science and AI researchers, defining project architecture, milestones, and pipelines.</li>
+                        <li>Designed a multimodal AI reporting system using <strong>Google's MedGemma</strong> fine-tuned for radiology, capable of generating bilingual structured medical reports combining image analysis and radiomics metrics.</li>
+                        <li>Developed <strong>ETL pipelines</strong> for <strong>DICOM</strong> data processing (Python, Pandas, NumPy) and extracted over <strong>100 imaging biomarkers</strong> using <strong>PyRadiomics</strong>.</li>
+                        <li>Designed and trained deep learning models with <strong>PyTorch</strong> and <strong>TensorFlow</strong>, including <strong>EfficientNet-B7</strong>, <strong>ResNet-50</strong>, <strong>Vision Transformers</strong>, and <strong>DC-UNet</strong> architectures for segmentation tasks.</li>
+                        <li>Built modular pipelines for image pre-processing, normalization, and automatic labeling for AI-assisted diagnostics.</li>
+                        <li>Managed <strong>CI/CD pipelines</strong> using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and reproducible notebooks for experiment tracking.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>Research Assistant — INESC TEC</strong>
+                    </div>
+                    <div class="exp-meta">Porto, Portugal · Hybrid · Oct 2024 – Present</div>
+                    <p class="exp-desc">Working within the <strong>TRIBE Lab</strong>, focusing on real-time computer vision systems for field robotics in agriculture.</p>
+                    <ul class="exp-list">
+                        <li>Developed and benchmarked detection and segmentation models for vineyard and orchard robots.</li>
+                        <li>Implemented architectures such as <strong>YOLOv11</strong>, <strong>RT-DETR</strong>, <strong>Faster R-CNN</strong>, <strong>Mask R-CNN</strong>, and <strong>Mask2Former</strong> for fruit and foliage segmentation.</li>
+                        <li>Conducted dataset design, annotation pipelines, and performance evaluations under real-world conditions.</li>
+                        <li>Integrated perception systems into robotics pipelines for autonomous decision-making.</li>
+                        <li>Technologies: Python, PyTorch, OpenCV, Detectron2, MMDetection, ROS2, Docker.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>Computer Vision Volunteer — Civil Police of the Federal District (PCDF)</strong>
+                        <a href="https://gitlab.com/lisa-unb/legwoui" target="_blank" class="gl-link" title="GitLab" aria-label="View project on GitLab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.65 9.39l-1.05-3.23c-.2-.62-1.08-.62-1.28 0L18.34 12H5.66L3.68 6.16c-.2-.62-1.08-.62-1.28 0L1.35 9.39c-.18.52.02 1.09.45 1.4l9.2 6.54c.3.22.71.22 1.01 0l9.2-6.54c.43-.31.62-.88.44-1.4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="exp-meta">Brasília, Brazil · Remote · Feb 2024 – Jun 2024</div>
+                    <p class="exp-desc">Research collaboration for forensic analysis and wound classification using computer vision.</p>
+                    <ul class="exp-list">
+                        <li>Built deep learning pipelines for <strong>gunshot wound classification</strong> and medico-legal distance estimation.</li>
+                        <li>Dataset: 2,551 real images from 489 cases (2012–2022).</li>
+                        <li>Augmented dataset with <strong>AutoAlbument</strong>, <strong>SMOTE</strong>, and <strong>GIMP preprocessing</strong>.</li>
+                        <li>Achieved over <strong>92% accuracy</strong> and <strong>94% AUC</strong> using <strong>ResNet</strong>, <strong>DenseNet</strong>, <strong>EfficientNet</strong>, and <strong>Vision Transformers (ViT)</strong>.</li>
+                        <li>Developed model evaluation metrics aligned with forensic standards.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>R&D Data Scientist — CENSIPAM (Amazon Protection System)</strong>
+                        <a href="https://github.com/BrunoScholles98/Machine-Learning-Based-Typification-System-of-Forest-Fires-in-Amazon-Rainforest" target="_blank" class="gh-link" title="GitHub" aria-label="View project on GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3.0-.4 1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="exp-meta">Brasília, Brazil · Hybrid · Sep 2021 – Dec 2023</div>
+                    <p class="exp-desc">Led an interdisciplinary R&D project to classify forest fires in the Amazon region using Machine Learning and satellite imagery.</p>
+                    <ul class="exp-list">
+                        <li>Collected and processed geospatial data from <strong>MODIS</strong>, <strong>VIIRS</strong>, and <strong>DETER</strong> satellites.</li>
+                        <li>Designed classification algorithms with <strong>Random Forest</strong> and <strong>Multi-Layer Perceptrons (MLPs)</strong> to predict fire typologies (human vs. natural).</li>
+                        <li>Built geospatial data pipelines using <strong>GeoPandas</strong>, <strong>Rasterio</strong>, and <strong>AWS S3/SageMaker</strong>.</li>
+                        <li>Created reproducible analysis workflows and dashboards for regional monitoring.</li>
+                        <li>Achieved ~77% model accuracy across diverse ecosystems.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>Research Assistant — UnB Internet of Things (IoT Lab)</strong>
+                        <a href="https://github.com/BrunoScholles98/UIoT-Crowd-Detector" target="_blank" class="gh-link" title="GitHub" aria-label="View project on GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3.0-.4 1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="exp-meta">Brasília, Brazil · Hybrid · Feb 2021 – Aug 2023</div>
+                    <p class="exp-desc">Worked on research projects combining IoT systems, edge computing, and Machine Learning.</p>
+                    <ul class="exp-list">
+                        <li>Developed real-time image processing pipelines for crowd detection in IoT devices.</li>
+                        <li>Integrated embedded systems with ML-based vision modules for safety monitoring.</li>
+                        <li>Implemented edge inferencing with <strong>OpenCV</strong>, <strong>TensorFlow Lite</strong>, and <strong>Raspberry Pi</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>Volunteer Researcher — Digital Signal Processing Group (GPDS)</strong>
+                        <a href="https://github.com/BrunoScholles98/Framework-for-Objective-Visual-Quality-Assessment-FOVQA" target="_blank" class="gh-link" title="GitHub" aria-label="View project on GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3.0-.4 1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="exp-meta">University of Brasília · Remote · Aug 2021 – Jan 2023</div>
+                    <p class="exp-desc">Contributed to the development of frameworks for objective audiovisual quality assessment.</p>
+                    <ul class="exp-list">
+                        <li>Built automated pipelines for <strong>video quality metrics</strong> (PSNR, SSIM, VMAF, LPIPS).</li>
+                        <li>Designed and trained <strong>CNN and ViT models</strong> to predict human MOS ratings.</li>
+                        <li>Published results at <strong>SIBGRAPI 2022</strong> and other international venues.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong>Engineering Intern — TELEBRAS S.A.</strong>
+                    </div>
+                    <div class="exp-meta">Brasília, Brazil · Hybrid · Sep 2020 – Feb 2022</div>
+                    <p class="exp-desc">Supported engineering documentation and deployment of telecommunications systems.</p>
+                    <ul class="exp-list">
+                        <li>Conducted network diagnostics and equipment installation.</li>
+                        <li>Participated in system migration projects and infrastructure documentation.</li>
+                        <li>Assisted with telecom equipment configuration and signal verification processes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="terminal-box" id="contact">
+            <div class="terminal-title-bar">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-body">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <a href="mailto:brunoscholles98@gmail.com" class="contact-item"><strong>Email:</strong> brunoscholles98@gmail.com</a>
+                        <a href="https://linkedin.com/in/bruno-scholles" target="_blank" rel="noopener noreferrer" class="contact-item"><strong>LinkedIn:</strong> linkedin.com/in/bruno-scholles</a>
+                        <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="contact-item"><strong>GitHub:</strong> github.com/BrunoScholles98</a>
+                        <span class="contact-item"><strong>Location:</strong> Porto, Portugal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        © 2025 Bruno Scholles — All Rights Reserved.
+    </footer>
+
+    <script>
+        const bioTextContent = "Engineer with 4 years of experience in the fields of Computer Vision and Artificial Intelligence. My key strength lies in the ability to bridge diverse scientific knowledge and apply it to real-world challenges, particularly in interdisciplinary projects. My work focuses on Machine Learning and Deep Learning, with experience in developing both classical models and advanced solutions for computer vision. I am constantly seeking to deepen my knowledge in AI, image and data processing, as well as Big Data technologies. Outside of work, I'm passionate about wildlife photography, especially photographing marmosets (small monkeys native to Brazil) and other animals. I also love nature and enjoy hiking and learning about biology.";
+        const additionalSentenceStart = "If you'd like to see some of these photos, ";
+        const additionalSentenceEnd = " to check them out.";
+        const bioElement = document.getElementById('bio-text');
+        const cursorElement = document.getElementById('cursor');
+        const typingSpeed = 20;
+        const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        let index = 0;
+        let hasFinalizedBio = false;
+
+        function finalizeBio() {
+            if (hasFinalizedBio) {
+                return;
+            }
+
+            hasFinalizedBio = true;
+            cursorElement.style.display = 'none';
+            bioElement.textContent = bioTextContent;
+
+            bioElement.appendChild(document.createElement('br'));
+            bioElement.appendChild(document.createElement('br'));
+            bioElement.appendChild(document.createTextNode(additionalSentenceStart));
+
+            const link = document.createElement('a');
+            link.href = "photography.html";
+            link.textContent = "click here";
+            bioElement.appendChild(link);
+
+            bioElement.appendChild(document.createTextNode(additionalSentenceEnd));
+        }
+
+        function typeText() {
+            if (hasFinalizedBio) {
+                return;
+            }
+
+            if (index < bioTextContent.length) {
+                bioElement.append(bioTextContent.charAt(index));
+                index++;
+                setTimeout(typeText, typingSpeed);
+                return;
+            }
+
+            finalizeBio();
+        }
+
+        function startTyping() {
+            if (motionPreference.matches) {
+                finalizeBio();
+                return;
+            }
+
+            bioElement.textContent = '';
+            cursorElement.style.display = 'inline';
+            index = 0;
+            hasFinalizedBio = false;
+            setTimeout(typeText, 300);
+        }
+
+        motionPreference.addEventListener('change', (event) => {
+            if (event.matches) {
+                finalizeBio();
+            } else {
+                startTyping();
+            }
+        });
+
+        window.addEventListener('load', () => {
+            startTyping();
+        });
+    </script>
+</body>
+</html>
