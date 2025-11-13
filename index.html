@@ -1,15 +1,10 @@
----
-layout: null
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% assign cache_bust = site.time | date: '%s' %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Scholles - AI Engineer</title>
-    <link rel="stylesheet" href="styles.css?v={{ cache_bust }}" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css" fetchpriority="high">
 </head>
 <body>
     <nav class="sticky-nav">
@@ -99,7 +94,7 @@ layout: null
             <div class="terminal-body">
                 <div class="profile-layout">
                     <div class="profile-photo-square">
-                        <img src="profile.jpg?v={{ cache_bust }}" alt="Bruno Scholles" loading="eager" fetchpriority="high" decoding="async">
+                        <img src="profile.jpg" alt="Bruno Scholles" loading="eager" fetchpriority="high" decoding="async">
                     </div>
                     <div class="profile-text">
                         <div class="profile-line profile-name">Bruno Scholles</div>
@@ -125,11 +120,11 @@ layout: null
                 <h2 class="section-title">Education</h2>
                 <ul class="terminal-list">
                     <li>
-                        <img src="imgs/Icons/Feup_Logo.png?v={{ cache_bust }}" alt="University of Porto logo" class="list-icon" loading="lazy" decoding="async" width="36" height="36">
+                        <img src="imgs/Icons/Feup_Logo.png" alt="University of Porto logo" class="list-icon" loading="lazy" decoding="async" width="36" height="36">
                         <span>M.Sc. in Computer Vision, University of Porto (FEUP)</span>
                     </li>
                     <li>
-                        <img src="imgs/Icons/UnB_Logo.png?v={{ cache_bust }}" alt="University of Brasília logo" class="list-icon" loading="lazy" decoding="async" width="36" height="36">
+                        <img src="imgs/Icons/UnB_Logo.png" alt="University of Brasília logo" class="list-icon" loading="lazy" decoding="async" width="36" height="36">
                         <span>B.Sc. in Communication Networks Engineering, University of Brasília (UnB)</span>
                     </li>
                 </ul>
