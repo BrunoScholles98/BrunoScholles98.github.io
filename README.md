@@ -4,7 +4,7 @@ Static personal website built with plain HTML/CSS and JavaScript.
 
 ## Local development
 - Open `index.html` directly in your browser, or run a lightweight web server such as `python -m http.server` and visit `http://localhost:8000`.
-- Ensure the `Icons/` and `SiteImgs/` folders stay alongside the HTML files so image paths resolve correctly.
+- Ensure the asset folders under `imgs/` (such as `imgs/Icons/`, `imgs/ProjectImgs/`, and `imgs/PhotographImgs/`) stay alongside the HTML files so image paths resolve correctly.
 
 ## Deployment
 - Automatic GitHub Pages deployments are configured via `.github/workflows/deploy.yml`.
