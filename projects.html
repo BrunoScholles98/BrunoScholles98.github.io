@@ -1,10 +1,15 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% assign cache_bust = site.time | date: '%s' %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Bruno Scholles</title>
-    <link rel="stylesheet" href="styles.css?v=20251113c" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css?v={{ cache_bust }}" fetchpriority="high">
 </head>
 <body>
     <nav class="sticky-nav">
@@ -91,7 +96,7 @@
 
                             <div class="project-subsection">
                                 <figure class="subsection-figure">
-                                    <img src="imgs/ProjectImgs/68747470733a2f2f692e6962622e636f2f674d4239353250352f4f7374656f4d652e706e67.png" alt="Grad-CAM overlay highlighting mandibular cortex regions considered by EfficientNet during osteoporosis screening" loading="lazy" decoding="async">
+                                    <img src="imgs/ProjectImgs/68747470733a2f2f692e6962622e636f2f674d4239353250352f4f7374656f4d652e706e67.png?v={{ cache_bust }}" alt="Grad-CAM overlay highlighting mandibular cortex regions considered by EfficientNet during osteoporosis screening" loading="lazy" decoding="async">
                                 </figure>
                                 <div class="subsection-body">
                                     <h3>Osteoporosis Screening with EfficientNet</h3>
@@ -113,7 +118,7 @@
 
                             <div class="project-subsection">
                                 <figure class="subsection-figure">
-                                    <img src="imgs/ProjectImgs/68747470733a2f2f692e6962622e636f2f53584759343533582f417465726f6d612e706e67.png" alt="Panoramic radiograph showing attention-guided localisation of carotid atheroma calcifications" loading="lazy" decoding="async">
+                                    <img src="imgs/ProjectImgs/68747470733a2f2f692e6962622e636f2f53584759343533582f417465726f6d612e706e67.png?v={{ cache_bust }}" alt="Panoramic radiograph showing attention-guided localisation of carotid atheroma calcifications" loading="lazy" decoding="async">
                                 </figure>
                                 <div class="subsection-body">
                                     <h3>Carotid Atheroma Hybrid Detection & Segmentation</h3>
@@ -135,7 +140,7 @@
 
                             <div class="project-subsection">
                                 <figure class="subsection-figure">
-                                    <img src="imgs/ProjectImgs/MainPage_Example.png" alt="GigaXReport web interface illustrating language selection, prompt input, and X-ray upload" loading="lazy" decoding="async">
+                                    <img src="imgs/ProjectImgs/MainPage_Example.png?v={{ cache_bust }}" alt="GigaXReport web interface illustrating language selection, prompt input, and X-ray upload" loading="lazy" decoding="async">
                                 </figure>
                                 <div class="subsection-body">
                                     <h3>GigaXReport Multimodal Diagnostic Framework</h3>
@@ -166,7 +171,7 @@
                         <div class="project-content">
                             <div class="project-media">
                                 <figure>
-                                    <img src="imgs/ProjectImgs/Blur_arqu_wounds.png" alt="Data pipeline diagram illustrating the gunshot wound classification workflow" loading="lazy" decoding="async">
+                                    <img src="imgs/ProjectImgs/Blur_arqu_wounds.png?v={{ cache_bust }}" alt="Data pipeline diagram illustrating the gunshot wound classification workflow" loading="lazy" decoding="async">
                                     <figcaption>Dataset curation and deep learning pipeline for forensic wound classification.</figcaption>
                                 </figure>
                             </div>
@@ -202,7 +207,7 @@
                         <div class="project-content">
                             <div class="project-media">
                                 <figure>
-                                    <img src="imgs/ProjectImgs/Amazon.png" alt="Satellite map with colour-coded wildfire typification outputs" loading="lazy" decoding="async">
+                                    <img src="imgs/ProjectImgs/Amazon.png?v={{ cache_bust }}" alt="Satellite map with colour-coded wildfire typification outputs" loading="lazy" decoding="async">
                                     <figcaption>Spatial typification map generated from MODIS/VIIRS datasets.</figcaption>
                                 </figure>
                             </div>

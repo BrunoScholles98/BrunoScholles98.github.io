@@ -1,10 +1,14 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% assign cache_bust = site.time | date: '%s' %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Publications - Bruno Scholles</title>
-    <link rel="stylesheet" href="styles.css?v=20251113c" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css?v={{ cache_bust }}" fetchpriority="high">
 </head>
 <body>
     <nav class="sticky-nav">
