@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography - Bruno Scholles</title>
-    <link rel="stylesheet" href="styles.css?v=20251113b">
+    <link rel="stylesheet" href="styles.css?v=20251113c" fetchpriority="high">
 </head>
 <body>
     <nav class="sticky-nav">
@@ -302,8 +302,21 @@
             }
         });
 
+        let resizeRaf = null;
+
         window.addEventListener('resize', () => {
-            applyLightboxSizing();
+            if (!lightbox.classList.contains('active')) {
+                return;
+            }
+
+            if (resizeRaf) {
+                cancelAnimationFrame(resizeRaf);
+            }
+
+            resizeRaf = requestAnimationFrame(() => {
+                applyLightboxSizing();
+                resizeRaf = null;
+            });
         });
 
         function closeLightbox() {

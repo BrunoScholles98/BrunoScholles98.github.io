@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +5,9 @@
 }
 
 :root {
-    --transition-main: 0.18s ease;
-    --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.28);
-    --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.26);
+    --transition-main: 0.16s ease-out;
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.18);
+    --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .sr-only {
@@ -26,7 +24,7 @@
 
 a,
 button {
-    transition: color var(--transition-main), background-color var(--transition-main), border-color var(--transition-main), transform var(--transition-main), box-shadow var(--transition-main);
+    transition: color var(--transition-main), background-color var(--transition-main), border-color var(--transition-main);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -62,12 +60,13 @@ html {
 
 body {
     font-family: 'Inter', 'Roboto', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1e1e1e 0%, #2b2b2b 100%);
+    background-color: #0f141b;
     color: #e4e8f0;
     line-height: 1.7;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    color-scheme: dark;
 }
 
 p,
@@ -81,11 +80,10 @@ li {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(20, 20, 20, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(100, 200, 255, 0.2);
-    padding: 0.9rem 1.75rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    background-color: rgba(17, 23, 32, 0.96);
+    border-bottom: 1px solid rgba(142, 197, 252, 0.12);
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +108,7 @@ li {
     text-decoration: none;
     border-radius: 14px;
     padding: 0.3rem;
-    transition: color var(--transition-main), transform var(--transition-main), background-color var(--transition-main), box-shadow var(--transition-main);
+    transition: color var(--transition-main), background-color var(--transition-main), box-shadow var(--transition-main);
 }
 
 .nav-icon svg {
@@ -121,9 +119,8 @@ li {
 .nav-icon:hover,
 .nav-icon:focus-visible {
     color: #b794f6;
-    transform: translateY(-2px);
     background: rgba(142, 197, 252, 0.12);
-    box-shadow: 0 12px 24px rgba(142, 197, 252, 0.15);
+    box-shadow: 0 4px 12px rgba(142, 197, 252, 0.2);
 }
 
 .nav-icon:focus-visible {
@@ -147,7 +144,7 @@ li {
     font-size: 0.7rem;
     letter-spacing: 0.4px;
     white-space: nowrap;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -192,15 +189,14 @@ li {
     background: rgba(15, 20, 28, 0.78);
     color: #d7e8ff;
     cursor: pointer;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
 }
 
 .sidebar-toggle:hover,
 .sidebar-toggle:focus-visible {
     background: rgba(142, 197, 252, 0.16);
     border-color: rgba(142, 197, 252, 0.45);
-    transform: translateY(-1px);
-    box-shadow: 0 16px 32px rgba(142, 197, 252, 0.2);
+    box-shadow: 0 8px 18px rgba(142, 197, 252, 0.2);
 }
 
 .sidebar-toggle-bar {
@@ -217,9 +213,8 @@ li {
     z-index: 1050;
     width: 220px;
     border-radius: 16px;
-    backdrop-filter: blur(16px);
     border: 1px solid rgba(142, 197, 252, 0.18);
-    background: rgba(18, 23, 32, 0.82);
+    background-color: #141d2a;
     box-shadow: var(--shadow-soft);
     transition: transform var(--transition-main), opacity var(--transition-main), box-shadow var(--transition-main);
 }
@@ -249,15 +244,14 @@ li {
     font-weight: 500;
     letter-spacing: 0.02em;
     border-radius: 12px;
-    transition: background-color var(--transition-main), color var(--transition-main), transform var(--transition-main), box-shadow var(--transition-main);
+    transition: background-color var(--transition-main), color var(--transition-main), box-shadow var(--transition-main);
 }
 
 .sidebar-links a:hover,
 .sidebar-links a:focus-visible {
     background: rgba(142, 197, 252, 0.12);
     color: #f0f6ff;
-    transform: translateX(4px);
-    box-shadow: 0 12px 24px rgba(142, 197, 252, 0.16);
+    box-shadow: 0 6px 16px rgba(142, 197, 252, 0.16);
 }
 
 .sidebar-link-icon {
@@ -265,7 +259,7 @@ li {
     height: 0.55rem;
     border-radius: 50%;
     background: linear-gradient(135deg, rgba(142, 197, 252, 0.85), rgba(183, 148, 246, 0.85));
-    box-shadow: 0 0 8px rgba(142, 197, 252, 0.35);
+    box-shadow: 0 0 5px rgba(142, 197, 252, 0.28);
 }
 
 .sidebar-close {
@@ -280,15 +274,14 @@ li {
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.26);
-    transition: background-color var(--transition-main), border-color var(--transition-main), transform var(--transition-main);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.26);
+    transition: background-color var(--transition-main), border-color var(--transition-main);
 }
 
 .sidebar-close:hover,
 .sidebar-close:focus-visible {
     background: rgba(142, 197, 252, 0.16);
     border-color: rgba(142, 197, 252, 0.45);
-    transform: translateY(-1px);
 }
 
 .sidebar-close-icon {
@@ -344,19 +337,18 @@ body.sidebar-open {
 }
 
 .terminal-box {
-    background: rgba(18, 24, 34, 0.82);
-    backdrop-filter: blur(14px);
+    background-color: #151f2b;
     border-radius: 16px;
     margin-bottom: 2.4rem;
     border: 1px solid rgba(142, 197, 252, 0.12);
     box-shadow: var(--shadow-soft);
     overflow: hidden;
-    transition: box-shadow var(--transition-main), border-color var(--transition-main), transform var(--transition-main);
+    transition: box-shadow var(--transition-main), border-color var(--transition-main);
 }
 
 .terminal-title-bar {
-    background: linear-gradient(135deg, #2d2d2d 0%, #232323 100%);
-    border-bottom: 1px solid rgba(142, 197, 252, 0.2);
+    background-color: #1c2534;
+    border-bottom: 1px solid rgba(142, 197, 252, 0.16);
     padding: 0.75rem 1rem;
     display: flex;
     gap: 0.5rem;
@@ -431,7 +423,6 @@ body.sidebar-open {
     font-size: clamp(2.4rem, 2.8vw + 1rem, 3.15rem);
     font-weight: 800;
     color: #8ec5fc;
-    text-shadow: 0 0 30px rgba(142, 197, 252, 0.35);
     letter-spacing: -0.015em;
 }
 
@@ -481,9 +472,8 @@ body.sidebar-open {
     line-height: 1.85;
     margin-bottom: 1.2rem;
     font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    max-width: 68ch;
+    max-width: 100%;
     white-space: pre-line;
-    margin-right: auto;
 }
 
 .bio-text a {
@@ -519,32 +509,31 @@ body.sidebar-open {
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
     position: relative;
-    background: rgba(28, 36, 48, 0.58);
+    background-color: #1c2635;
     border-radius: 8px;
     border-left: 3px solid #8ec5fc;
     display: flex;
     align-items: center;
     gap: 1rem;
     font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
-    transition: transform var(--transition-main), background-color var(--transition-main), border-color var(--transition-main), box-shadow var(--transition-main);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    transition: background-color var(--transition-main), border-color var(--transition-main), box-shadow var(--transition-main);
 }
 
 .terminal-list li:hover {
-    background: rgba(40, 52, 68, 0.72);
+    background-color: #223146;
     border-left-color: #b794f6;
-    transform: translateY(-2px);
-    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .experience-item {
     margin-bottom: 2.5rem;
     padding: 1.65rem;
-    background: rgba(22, 28, 40, 0.65);
+    background-color: #161f2c;
     border-radius: 16px;
     border: 1px solid rgba(142, 197, 252, 0.16);
     box-shadow: var(--shadow-card);
-    transition: transform var(--transition-main), box-shadow var(--transition-main), border-color var(--transition-main), background-color var(--transition-main);
+    transition: box-shadow var(--transition-main), border-color var(--transition-main), background-color var(--transition-main);
 }
 
 .experience-item:last-child {
@@ -552,10 +541,9 @@ body.sidebar-open {
 }
 
 .experience-item:hover {
-    transform: translateY(-3px);
     border-color: rgba(142, 197, 252, 0.28);
     background: rgba(28, 36, 52, 0.72);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 .exp-header {
@@ -637,7 +625,7 @@ body.sidebar-open {
     object-fit: contain;
     background: rgba(20, 20, 20, 0.6);
     padding: 0.3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     flex-shrink: 0;
 }
 
@@ -648,19 +636,18 @@ body.sidebar-open {
 }
 
 .skills-card {
-    background: rgba(22, 28, 40, 0.62);
+    background-color: #161f2c;
     border-radius: 14px;
     border: 1px solid rgba(142, 197, 252, 0.16);
     padding: 1.2rem 1.35rem;
     box-shadow: var(--shadow-card);
-    transition: transform var(--transition-main), box-shadow var(--transition-main), border-color var(--transition-main), background-color var(--transition-main);
+    transition: box-shadow var(--transition-main), border-color var(--transition-main), background-color var(--transition-main);
 }
 
 .skills-card:hover {
-    transform: translateY(-3px);
     border-color: rgba(142, 197, 252, 0.28);
-    background: rgba(30, 38, 52, 0.7);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+    background: rgba(30, 38, 52, 0.68);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 .skills-heading {
@@ -713,14 +700,13 @@ body.sidebar-open {
     font-size: 0.84rem;
     font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     letter-spacing: 0.03em;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+    transition: box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .skill-chip:hover {
     background: rgba(142, 197, 252, 0.18);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.32);
-    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
 }
 
 .contact-grid {
@@ -741,7 +727,7 @@ body.sidebar-open {
     font-size: 0.98rem;
     text-decoration: none;
     font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    transition: color var(--transition-main), transform var(--transition-main);
+    transition: color var(--transition-main);
 }
 
 .contact-item strong {
@@ -752,7 +738,6 @@ body.sidebar-open {
 
 .contact-item:hover {
     color: #f0f6ff;
-    transform: translateX(2px);
 }
 
 
@@ -769,18 +754,17 @@ body.sidebar-open {
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding: 1.6rem;
-    background: rgba(22, 28, 40, 0.62);
+    background-color: #161f2c;
     border-radius: 16px;
     border: 1px solid rgba(142, 197, 252, 0.16);
     box-shadow: var(--shadow-card);
-    transition: transform var(--transition-main), box-shadow var(--transition-main), border-color var(--transition-main), background-color var(--transition-main);
+    transition: box-shadow var(--transition-main), border-color var(--transition-main), background-color var(--transition-main);
 }
 
 .publication-item:hover {
-    transform: translateY(-3px);
     border-color: rgba(142, 197, 252, 0.28);
-    background: rgba(30, 38, 52, 0.7);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+    background: rgba(30, 38, 52, 0.68);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 .pub-number {
@@ -838,7 +822,7 @@ body.sidebar-open {
     display: block;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .photo-item:nth-child(6n) {
@@ -894,7 +878,7 @@ body.sidebar-open {
 
 .lightbox-content {
     border-radius: 16px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -926,7 +910,7 @@ body.sidebar-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
 .hero {
@@ -935,7 +919,7 @@ body.sidebar-open {
     padding: 2rem;
     background: rgba(35, 35, 35, 0.85);
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
 }
 
 .intro-text {
@@ -970,17 +954,17 @@ body.sidebar-open {
 }
 
 .project-item {
-    background: rgba(16, 26, 38, 0.85);
+    background: rgba(16, 26, 38, 0.78);
     border: 1px solid rgba(142, 197, 252, 0.18);
     border-radius: 16px;
-    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
     overflow: hidden;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-item[open] {
     border-color: rgba(142, 197, 252, 0.45);
-    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .project-item summary {
