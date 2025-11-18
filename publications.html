@@ -1,54 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-language="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Publications - Bruno Scholles</title>
+    <title data-i18n data-i18n-pt="Publicações Científicas - Bruno Scholles">Scientific Publications - Bruno Scholles</title>
     <link rel="stylesheet" href="styles.css" fetchpriority="high">
+    <script>
+        (function() {
+            try {
+                const storedTheme = localStorage.getItem('preferred-theme');
+                if (storedTheme === 'light' || storedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', storedTheme);
+                }
+            } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <script src="theme.js" defer></script>
+    <script src="language.js" defer></script>
 </head>
 <body>
     <nav class="sticky-nav">
         <div class="nav-left">
-            <a class="nav-brand" href="index.html" aria-label="Back to home">
+            <a class="nav-brand" href="index.html" aria-label="Back to home" data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Voltar para a página inicial">
                 Bruno Scholles
             </a>
         </div>
         <div class="nav-center">
-            <a href="index.html" class="nav-icon" aria-label="Home" data-tooltip="Home">
+            <a href="index.html" class="nav-icon" aria-label="Home" data-tooltip="Home" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Início" data-i18n-pt-data-tooltip="Início">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M2.5 11.75L11.63 3.2a.75.75 0 0 1 .98 0l9.14 8.55"></path>
                     <path d="M5 10.25V21h5.5v-5.5h3V21H19V10.25"></path>
                 </svg>
             </a>
-            <a href="projects.html" class="nav-icon" aria-label="Projects" data-tooltip="Projects">
+            <a href="projects.html" class="nav-icon" aria-label="Projects" data-tooltip="Projects" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Projetos" data-i18n-pt-data-tooltip="Projetos">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                     <polyline points="2 12 12 17 22 12"></polyline>
                     <polyline points="2 17 12 22 22 17"></polyline>
                 </svg>
             </a>
-            <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="GitHub" data-tooltip="GitHub">
+            <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="GitHub" data-tooltip="GitHub" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="GitHub" data-i18n-pt-data-tooltip="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/bruno-scholles/" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <a href="https://www.linkedin.com/in/bruno-scholles/" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="LinkedIn" data-tooltip="LinkedIn" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="LinkedIn" data-i18n-pt-data-tooltip="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
             </a>
-            <a href="publications.html" class="nav-icon" aria-label="Publications" data-tooltip="Publications">
+            <a href="publications.html" class="nav-icon" aria-label="Publications" data-tooltip="Publications" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Publicações" data-i18n-pt-data-tooltip="Publicações">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
             </a>
-            <a href="photography.html" class="nav-icon" aria-label="Photography" data-tooltip="Photography">
+            <a href="photography.html" class="nav-icon" aria-label="Photography" data-tooltip="Photography" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Fotografia" data-i18n-pt-data-tooltip="Fotografia">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
                     <circle cx="12" cy="13" r="4"></circle>
                 </svg>
             </a>
+        </div>
+        <div class="nav-right">
+            <button class="language-switch" type="button" role="switch" aria-pressed="false" aria-label="Switch to Portuguese" data-label-en="Switch to Portuguese" data-label-pt="Alternar para inglês">
+                <span class="sr-only" data-i18n data-i18n-pt="Alternar idioma">Switch language</span>
+                <span class="language-switch-flags" aria-hidden="true">
+                    <span class="language-flag language-flag--pt"></span>
+                    <span class="language-flag language-flag--en"></span>
+                </span>
+                <span class="language-switch-thumb" aria-hidden="true"></span>
+            </button>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false" data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Alternar tema claro/escuro">
+                <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 6.5 6.5 0 1 0 21 14.5z"></path>
+                    </svg>
+                </span>
+                <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                </span>
+            </button>
         </div>
     </nav>
 
@@ -60,7 +97,8 @@
                 <span class="terminal-btn green"></span>
             </div>
             <div class="terminal-body">
-                <h1 class="page-title">Scientific Publications</h1>
+                <h1 class="page-title" data-i18n data-i18n-pt="Publicações Científicas">Scientific Publications</h1>
+                <p class="intro-text" data-i18n data-i18n-pt="Seleção de trabalhos revisados por pares e manuscritos aceitos.">Select peer-reviewed work and accepted manuscripts.</p>
                 <div class="section-divider"></div>
 
                 <div class="publication-item">
@@ -129,7 +167,7 @@
     </main>
 
     <footer class="site-footer">
-        © 2025 Bruno Scholles — All Rights Reserved.
+        <span data-i18n data-i18n-pt="© 2025 Bruno Scholles — Todos os direitos reservados.">© 2025 Bruno Scholles — All Rights Reserved.</span>
     </footer>
 </body>
 </html>

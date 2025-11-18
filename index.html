@@ -1,89 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-language="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno Scholles - AI Engineer</title>
+    <title data-i18n data-i18n-pt="Bruno Scholles - Engenheiro de IA">Bruno Scholles - AI Engineer</title>
     <link rel="stylesheet" href="styles.css" fetchpriority="high">
+    <script src="theme.js" defer></script>
+    <script src="language.js" defer></script>
+    <script>
+        (function() {
+            try {
+                const storedTheme = localStorage.getItem('preferred-theme');
+                if (storedTheme === 'light' || storedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', storedTheme);
+                }
+            } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <nav class="sticky-nav">
         <div class="nav-left">
             <button class="sidebar-toggle" type="button" aria-controls="sidebar-nav" aria-expanded="false">
-                <span class="sr-only">Toggle navigation menu</span>
+                <span class="sr-only" data-i18n data-i18n-pt="Alternar menu de navegação">Toggle navigation menu</span>
                 <span class="sidebar-toggle-bar"></span>
                 <span class="sidebar-toggle-bar"></span>
                 <span class="sidebar-toggle-bar"></span>
             </button>
-            <a class="nav-brand" href="index.html" aria-label="Go to home">
+            <a class="nav-brand" href="index.html" aria-label="Go to home" data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Ir para a página inicial">
                 Bruno Scholles
             </a>
         </div>
         <div class="nav-center">
-            <a href="index.html" class="nav-icon" aria-label="Home" data-tooltip="Home">
+            <a href="index.html" class="nav-icon" aria-label="Home" data-tooltip="Home" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Início" data-i18n-pt-data-tooltip="Início">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M2.5 11.75L11.63 3.2a.75.75 0 0 1 .98 0l9.14 8.55"></path>
                     <path d="M5 10.25V21h5.5v-5.5h3V21H19V10.25"></path>
                 </svg>
             </a>
-            <a href="projects.html" class="nav-icon" aria-label="Projects" data-tooltip="Projects">
+            <a href="projects.html" class="nav-icon" aria-label="Projects" data-tooltip="Projects" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Projetos" data-i18n-pt-data-tooltip="Projetos">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                     <polyline points="2 12 12 17 22 12"></polyline>
                     <polyline points="2 17 12 22 22 17"></polyline>
                 </svg>
             </a>
-            <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="GitHub" data-tooltip="GitHub">
+            <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="GitHub" data-tooltip="GitHub" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="GitHub" data-i18n-pt-data-tooltip="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/bruno-scholles/" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <a href="https://www.linkedin.com/in/bruno-scholles/" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="LinkedIn" data-tooltip="LinkedIn" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="LinkedIn" data-i18n-pt-data-tooltip="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
             </a>
-            <a href="publications.html" class="nav-icon" aria-label="Publications" data-tooltip="Publications">
+            <a href="publications.html" class="nav-icon" aria-label="Publications" data-tooltip="Publications" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Publicações" data-i18n-pt-data-tooltip="Publicações">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
             </a>
-            <a href="photography.html" class="nav-icon" aria-label="Photography" data-tooltip="Photography">
+            <a href="photography.html" class="nav-icon" aria-label="Photography" data-tooltip="Photography" data-i18n-attrs="aria-label,data-tooltip" data-i18n-pt-aria-label="Fotografia" data-i18n-pt-data-tooltip="Fotografia">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
                     <circle cx="12" cy="13" r="4"></circle>
                 </svg>
             </a>
         </div>
+        <div class="nav-right">
+            <button class="language-switch" type="button" role="switch" aria-pressed="false" aria-label="Switch to Portuguese" data-label-en="Switch to Portuguese" data-label-pt="Alternar para inglês">
+                <span class="sr-only" data-i18n data-i18n-pt="Alternar idioma">Switch language</span>
+                <span class="language-switch-flags" aria-hidden="true">
+                    <span class="language-flag language-flag--pt"></span>
+                    <span class="language-flag language-flag--en"></span>
+                </span>
+                <span class="language-switch-thumb" aria-hidden="true"></span>
+            </button>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false" data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Alternar tema claro/escuro">
+                <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 6.5 6.5 0 1 0 21 14.5z"></path>
+                    </svg>
+                </span>
+                <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
     </nav>
 
     <div class="content-layout">
         <aside class="sidebar-nav" id="sidebar-nav">
         <div class="sidebar-inner">
-            <button class="sidebar-close" type="button" aria-label="Close navigation menu" data-sidebar-close>
+            <div class="sidebar-title-bar" aria-hidden="true">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="sidebar-header">
+                <span class="sidebar-header-title" data-i18n data-i18n-pt="Navegação">Navigation</span>
+                <span class="sidebar-header-line" aria-hidden="true"></span>
+            </div>
+            <button class="sidebar-close" type="button" aria-label="Close navigation menu" data-sidebar-close data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Fechar menu de navegação">
                 <span class="sidebar-close-icon" aria-hidden="true"></span>
             </button>
             <nav class="sidebar-links" aria-label="Section navigation">
-                <a href="#about" data-sidebar-close>
-                    <span class="sidebar-link-icon" aria-hidden="true"></span>
-                    <span>About Me</span>
+                <a href="#about" class="sidebar-link active" data-sidebar-close aria-current="page">
+                    <span class="sidebar-link-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="3"></circle>
+                            <path d="M4 20c0-3.314 3.134-6 7-6h2c3.866 0 7 2.686 7 6"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n data-i18n-pt="Sobre mim">About Me</span>
                 </a>
-                <a href="#education" data-sidebar-close>
-                    <span class="sidebar-link-icon" aria-hidden="true"></span>
-                    <span>Education</span>
+                <a href="#education" class="sidebar-link" data-sidebar-close>
+                    <span class="sidebar-link-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5V6.5L12 4l8 2.5v13"></path>
+                            <path d="M12 4v15.5"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n data-i18n-pt="Formação Acadêmica">Education</span>
                 </a>
-                <a href="#skills" data-sidebar-close>
-                    <span class="sidebar-link-icon" aria-hidden="true"></span>
-                    <span>Technical Skills</span>
+                <a href="#skills" class="sidebar-link" data-sidebar-close>
+                    <span class="sidebar-link-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="8" width="18" height="8" rx="2"></rect>
+                            <path d="M7 8V6h10v2"></path>
+                            <circle cx="8.5" cy="12" r="0.8"></circle>
+                            <circle cx="12" cy="12" r="0.8"></circle>
+                            <circle cx="15.5" cy="12" r="0.8"></circle>
+                        </svg>
+                    </span>
+                    <span data-i18n data-i18n-pt="Competências Técnicas">Technical Skills</span>
                 </a>
-                <a href="#experience" data-sidebar-close>
-                    <span class="sidebar-link-icon" aria-hidden="true"></span>
-                    <span>Professional Experience</span>
+                <a href="#experience" class="sidebar-link" data-sidebar-close>
+                    <span class="sidebar-link-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 9h16v10H4z"></path>
+                            <path d="M9 9V6h6v3"></path>
+                            <path d="M4 13h16"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n data-i18n-pt="Experiência Profissional">Professional Experience</span>
                 </a>
-                <a href="#contact" data-sidebar-close>
-                    <span class="sidebar-link-icon" aria-hidden="true"></span>
-                    <span>Contact</span>
+                <a href="#contact" class="sidebar-link" data-sidebar-close>
+                    <span class="sidebar-link-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16v12H4z"></path>
+                            <path d="m4 8 8 5 8-5"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n data-i18n-pt="Contato">Contact</span>
                 </a>
             </nav>
         </div>
@@ -103,13 +178,13 @@
                     </div>
                     <div class="profile-text">
                         <div class="profile-line profile-name">Bruno Scholles</div>
-                        <div class="profile-line profile-role">AI Engineer</div>
-                        <div class="profile-line profile-accent">M.Sc. in Computer Vision – Faculty of Engineering of the University of Porto</div>
-                        <div class="profile-line profile-location">Based in Portugal 🇵🇹</div>
+                        <div class="profile-line profile-role" data-i18n data-i18n-pt="Engenheiro de IA">AI Engineer</div>
+                        <div class="profile-line profile-accent" data-i18n data-i18n-pt="Mestrado em Visão Computacional – Faculdade de Engenharia da Universidade do Porto">M.Sc. in Computer Vision – Faculty of Engineering of the University of Porto</div>
+                        <div class="profile-line profile-location" data-i18n data-i18n-pt="Baseado em Portugal 🇵🇹">Based in Portugal 🇵🇹</div>
                     </div>
                 </div>
                 <div class="section-divider"></div>
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n data-i18n-pt="Sobre mim">About Me</h2>
                 <p class="bio-text" id="bio-text"></p>
                 <span class="cursor-block" id="cursor">█</span>
             </div>
@@ -122,17 +197,24 @@
                 <span class="terminal-btn green"></span>
             </div>
             <div class="terminal-body">
-                <h2 class="section-title">Education</h2>
-                <ul class="terminal-list">
-                    <li>
-                        <img src="imgs/Icons/Feup_Logo.png" alt="University of Porto logo" class="list-icon" loading="lazy" decoding="async" width="36" height="36">
-                        <span>M.Sc. in Computer Vision, University of Porto (FEUP)</span>
-                    </li>
-                    <li>
-                        <img src="imgs/Icons/UnB_Logo.png" alt="University of Brasília logo" class="list-icon" loading="lazy" decoding="async" width="36" height="36">
-                        <span>B.Sc. in Communication Networks Engineering, University of Brasília (UnB)</span>
-                    </li>
-                </ul>
+                <h2 class="section-title" data-i18n data-i18n-pt="Formação Acadêmica">Education</h2>
+                <div class="education-grid">
+                    <article class="education-card">
+                        <img src="imgs/Icons/Feup_Logo.png" alt="University of Porto logo" class="education-logo" loading="lazy" decoding="async" width="130" height="130" data-logo-dark="imgs/Icons/Feup_Logo.png" data-logo-light="imgs/Icons/feup_light.png">
+                        <div class="education-details">
+                            <h3 class="education-degree" data-i18n data-i18n-pt="Mestrado em Visão Computacional">M.Sc. in Computer Vision</h3>
+                            <p class="education-school" data-i18n data-i18n-pt="Universidade do Porto (FEUP) — instituição principal">University of Porto (FEUP) — primary institution</p>
+                            <p class="education-extra" data-i18n data-i18n-pt="Também na Universidade de Santiago de Compostela, Universidade de Vigo e Universidade da Coruña">Also at University of Santiago de Compostela, University of Vigo &amp; University of Coruña</p>
+                        </div>
+                    </article>
+                    <article class="education-card">
+                        <img src="imgs/Icons/UnB_Logo.png" alt="University of Brasília logo" class="education-logo" loading="lazy" decoding="async" width="130" height="130">
+                        <div class="education-details">
+                            <h3 class="education-degree" data-i18n data-i18n-pt="Bacharelado em Engenharia de Redes de Comunicação">B.Sc. in Communication Networks Engineering</h3>
+                            <p class="education-school" data-i18n data-i18n-pt="Universidade de Brasília (UnB)">University of Brasília (UnB)</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -143,10 +225,10 @@
                 <span class="terminal-btn green"></span>
             </div>
             <div class="terminal-body">
-                <h2 class="section-title">Technical Skills</h2>
+                <h2 class="section-title" data-i18n data-i18n-pt="Competências Técnicas">Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skills-card">
-                        <h3 class="skills-heading">AI &amp; Computer Vision</h3>
+                        <h3 class="skills-heading" data-i18n data-i18n-pt="IA &amp; Visão Computacional">AI &amp; Computer Vision</h3>
                         <div class="skills-chip-group">
                             <span class="skill-chip">Python</span>
                             <span class="skill-chip">PyTorch</span>
@@ -155,16 +237,16 @@
                             <span class="skill-chip">Keras</span>
                             <span class="skill-chip">Hugging Face</span>
                             <span class="skill-chip">Deep Learning</span>
-                            <span class="skill-chip">Machine Learning</span>
-                            <span class="skill-chip">Artificial Intelligence</span>
-                            <span class="skill-chip">Generative AI</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Aprendizado de Máquina">Machine Learning</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Inteligência Artificial">Artificial Intelligence</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="IA Generativa">Generative AI</span>
                             <span class="skill-chip">LLMs</span>
                             <span class="skill-chip">SLMs</span>
-                            <span class="skill-chip">Fine-tuning</span>
-                            <span class="skill-chip">AI Agents</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Ajuste fino">Fine-tuning</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Agentes de IA">AI Agents</span>
                             <span class="skill-chip">OpenCV</span>
                             <span class="skill-chip">Scikit-video</span>
-                            <span class="skill-chip">Image Processing</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Processamento de Imagens">Image Processing</span>
                             <span class="skill-chip">Pandas</span>
                             <span class="skill-chip">GeoPandas</span>
                             <span class="skill-chip">Rasterio</span>
@@ -174,7 +256,7 @@
                         </div>
                     </div>
                     <div class="skills-card">
-                        <h3 class="skills-heading">Data Engineering &amp; MLOps</h3>
+                        <h3 class="skills-heading" data-i18n data-i18n-pt="Engenharia de Dados &amp; MLOps">Data Engineering &amp; MLOps</h3>
                         <div class="skills-chip-group">
                             <span class="skill-chip">Docker</span>
                             <span class="skill-chip">Kubernetes</span>
@@ -182,28 +264,28 @@
                             <span class="skill-chip">AWS</span>
                             <span class="skill-chip">SQL</span>
                             <span class="skill-chip">MySQL</span>
-                            <span class="skill-chip">Data Pipelines &amp; ETL</span>
-                            <span class="skill-chip">Big Data Management</span>
-                            <span class="skill-chip">Cloud Deployment</span>
-                            <span class="skill-chip">Containerization</span>
-                            <span class="skill-chip">CI/CD Pipelines</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Pipelines de Dados &amp; ETL">Data Pipelines &amp; ETL</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Gestão de Big Data">Big Data Management</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Deploy em Nuvem">Cloud Deployment</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Containerização">Containerization</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Pipelines de CI/CD">CI/CD Pipelines</span>
                             <span class="skill-chip">Google Earth Engine</span>
                             <span class="skill-chip">QGIS</span>
                         </div>
                     </div>
                     <div class="skills-card">
-                        <h3 class="skills-heading">Software Engineering</h3>
+                        <h3 class="skills-heading" data-i18n data-i18n-pt="Engenharia de Software">Software Engineering</h3>
                         <div class="skills-chip-group">
                             <span class="skill-chip">FastAPI</span>
                             <span class="skill-chip">Flask</span>
-                            <span class="skill-chip">Web Apps (FastAPI / Flask)</span>
-                            <span class="skill-chip">API Development</span>
-                            <span class="skill-chip">Automation Scripts</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Aplicações Web (FastAPI / Flask)">Web Apps (FastAPI / Flask)</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Desenvolvimento de APIs">API Development</span>
+                            <span class="skill-chip" data-i18n data-i18n-pt="Scripts de Automação">Automation Scripts</span>
                             <span class="skill-chip">Microsoft Office</span>
                         </div>
                     </div>
                     <div class="skills-card">
-                        <h3 class="skills-heading">Programming Languages</h3>
+                        <h3 class="skills-heading" data-i18n data-i18n-pt="Linguagens de Programação">Programming Languages</h3>
                         <div class="skills-chip-group">
                             <span class="skill-chip">Python</span>
                             <span class="skill-chip">C</span>
@@ -213,13 +295,13 @@
                         </div>
                     </div>
                     <div class="skills-card">
-                        <h3 class="skills-heading">Soft Skills</h3>
+                        <h3 class="skills-heading" data-i18n data-i18n-pt="Competências Comportamentais">Soft Skills</h3>
                         <ul class="skills-list">
-                            <li>Leadership experience in research groups</li>
-                            <li>Strong adaptability to change</li>
-                            <li>Excellent communication and problem-solving skills</li>
-                            <li>Enjoy working in multidisciplinary and collaborative environments</li>
-                            <li>Team-oriented mindset with high reliability and initiative</li>
+                            <li data-i18n data-i18n-pt="Experiência de liderança em grupos de pesquisa">Leadership experience in research groups</li>
+                            <li data-i18n data-i18n-pt="Grande capacidade de adaptação a mudanças">Strong adaptability to change</li>
+                            <li data-i18n data-i18n-pt="Excelente comunicação e resolução de problemas">Excellent communication and problem-solving skills</li>
+                            <li data-i18n data-i18n-pt="Gosto de atuar em ambientes multidisciplinares e colaborativos">Enjoy working in multidisciplinary and collaborative environments</li>
+                            <li data-i18n data-i18n-pt="Mentalidade orientada ao time, com alta confiabilidade e iniciativa">Team-oriented mindset with high reliability and initiative</li>
                         </ul>
                     </div>
                 </div>
@@ -233,59 +315,59 @@
                 <span class="terminal-btn green"></span>
             </div>
             <div class="terminal-body">
-                <h2 class="section-title">Professional Experience</h2>
+                <h2 class="section-title" data-i18n data-i18n-pt="Experiência Profissional">Professional Experience</h2>
                 
                 <div class="experience-item">
                     <div class="exp-header">
-                        <strong>AI Engineer — Associação GigaCandanga</strong>
-                        <a href="https://github.com/BrunoScholles98/GigaSistemica-Advancing-Systemic-Health-Diagnostics-through-AI" target="_blank" class="gh-link" title="GitHub" aria-label="View project on GitHub">
+                        <strong data-i18n data-i18n-pt="Pesquisador Assistente — INESC TEC">Research Assistant — INESC TEC</strong>
+                    </div>
+                    <div class="exp-meta" data-i18n data-i18n-pt="Porto, Portugal · Híbrido · Out 2024 – Atual">Porto, Portugal · Hybrid · Oct 2024 – Present</div>
+                    <p class="exp-desc" data-i18n data-i18n-pt="Atuo no <strong>TRIBE Lab</strong>, focado em sistemas de visão computacional em tempo real para robótica de campo na agricultura." data-i18n-mode="html">Working within the <strong>TRIBE Lab</strong>, focusing on real-time computer vision systems for field robotics in agriculture.</p>
+                    <ul class="exp-list">
+                        <li data-i18n data-i18n-pt="Desenvolvi e comparei modelos de detecção e segmentação para robôs em vinhedos e pomares.">Developed and benchmarked detection and segmentation models for vineyard and orchard robots.</li>
+                        <li data-i18n data-i18n-pt="Implementei arquiteturas como <strong>YOLOv11</strong>, <strong>RT-DETR</strong>, <strong>Faster R-CNN</strong>, <strong>Mask R-CNN</strong> e <strong>Mask2Former</strong> para segmentação de frutos e folhagem." data-i18n-mode="html">Implemented architectures such as <strong>YOLOv11</strong>, <strong>RT-DETR</strong>, <strong>Faster R-CNN</strong>, <strong>Mask R-CNN</strong>, and <strong>Mask2Former</strong> for fruit and foliage segmentation.</li>
+                        <li data-i18n data-i18n-pt="Conduzi desenho de datasets, pipelines de anotação e avaliações de desempenho em condições reais.">Conducted dataset design, annotation pipelines, and performance evaluations under real-world conditions.</li>
+                        <li data-i18n data-i18n-pt="Integrei sistemas de percepção em pipelines de robótica para decisões autônomas.">Integrated perception systems into robotics pipelines for autonomous decision-making.</li>
+                        <li data-i18n data-i18n-pt="Tecnologias: Python, PyTorch, OpenCV, Detectron2, MMDetection, ROS2, Docker.">Technologies: Python, PyTorch, OpenCV, Detectron2, MMDetection, ROS2, Docker.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <strong data-i18n data-i18n-pt="Engenheiro de IA — Associação GigaCandanga">AI Engineer — Associação GigaCandanga</strong>
+                        <a href="https://github.com/BrunoScholles98/GigaSistemica-Advancing-Systemic-Health-Diagnostics-through-AI" target="_blank" class="gh-link" title="GitHub" aria-label="View project on GitHub" data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Ver projeto no GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3.0-.4 1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/>
                             </svg>
                         </a>
                     </div>
-                    <div class="exp-meta">Brasília, Brazil · Remote · Mar 2023 – Present</div>
-                    <p class="exp-desc">GigaSistêmica is a collaborative initiative between GigaCandanga and the University of Brasília that leverages AI for early detection and systemic efficiency in health diagnostics through dental imaging.</p>
+                    <div class="exp-meta" data-i18n data-i18n-pt="Brasília, Brasil · Remoto · Mar 2023 – Atual">Brasília, Brazil · Remote · Mar 2023 – Present</div>
+                    <p class="exp-desc" data-i18n data-i18n-pt="GigaSistêmica é uma iniciativa colaborativa entre a GigaCandanga e a Universidade de Brasília que utiliza IA para detecção precoce e eficiência sistêmica em diagnósticos de saúde por meio de imagens odontológicas.">GigaSistêmica is a collaborative initiative between GigaCandanga and the University of Brasília that leverages AI for early detection and systemic efficiency in health diagnostics through dental imaging.</p>
                     <ul class="exp-list">
-                        <li>Lead and mentor a team of Data Science and AI researchers, defining project architecture, milestones, and pipelines.</li>
-                        <li>Designed a multimodal AI reporting system using <strong>Google's MedGemma</strong> fine-tuned for radiology, capable of generating bilingual structured medical reports combining image analysis and radiomics metrics.</li>
-                        <li>Developed <strong>ETL pipelines</strong> for <strong>DICOM</strong> data processing (Python, Pandas, NumPy) and extracted over <strong>100 imaging biomarkers</strong> using <strong>PyRadiomics</strong>.</li>
-                        <li>Designed and trained deep learning models with <strong>PyTorch</strong> and <strong>TensorFlow</strong>, including <strong>EfficientNet-B7</strong>, <strong>ResNet-50</strong>, <strong>Vision Transformers</strong>, and <strong>DC-UNet</strong> architectures for segmentation tasks.</li>
-                        <li>Built modular pipelines for image pre-processing, normalization, and automatic labeling for AI-assisted diagnostics.</li>
-                        <li>Managed <strong>CI/CD pipelines</strong> using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and reproducible notebooks for experiment tracking.</li>
+                        <li data-i18n data-i18n-pt="Lidero e mentoro uma equipe de pesquisadores de Ciência de Dados e IA, definindo arquitetura, marcos e pipelines do projeto.">Lead and mentor a team of Data Science and AI researchers, defining project architecture, milestones, and pipelines.</li>
+                        <li data-i18n data-i18n-pt="Projetei um sistema de relatórios multimodal com o <strong>MedGemma</strong> da Google, ajustado para radiologia e capaz de gerar laudos médicos bilíngues combinando análise de imagens e métricas de radiômica." data-i18n-mode="html">Designed a multimodal AI reporting system using <strong>Google's MedGemma</strong> fine-tuned for radiology, capable of generating bilingual structured medical reports combining image analysis and radiomics metrics.</li>
+                        <li data-i18n data-i18n-pt="Desenvolvi <strong>pipelines ETL</strong> para processamento de dados <strong>DICOM</strong> (Python, Pandas, NumPy) e extraí mais de <strong>100 biomarcadores de imagem</strong> com <strong>PyRadiomics</strong>." data-i18n-mode="html">Developed <strong>ETL pipelines</strong> for <strong>DICOM</strong> data processing (Python, Pandas, NumPy) and extracted over <strong>100 imaging biomarkers</strong> using <strong>PyRadiomics</strong>.</li>
+                        <li data-i18n data-i18n-pt="Projetei e treinei modelos de deep learning com <strong>PyTorch</strong> e <strong>TensorFlow</strong>, incluindo <strong>EfficientNet-B7</strong>, <strong>ResNet-50</strong>, <strong>Vision Transformers</strong> e <strong>DC-UNet</strong> para tarefas de segmentação." data-i18n-mode="html">Designed and trained deep learning models with <strong>PyTorch</strong> and <strong>TensorFlow</strong>, including <strong>EfficientNet-B7</strong>, <strong>ResNet-50</strong>, <strong>Vision Transformers</strong>, and <strong>DC-UNet</strong> architectures for segmentation tasks.</li>
+                        <li data-i18n data-i18n-pt="Construí pipelines modulares de pré-processamento, normalização e rotulagem automática para diagnósticos assistidos por IA.">Built modular pipelines for image pre-processing, normalization, and automatic labeling for AI-assisted diagnostics.</li>
+                        <li data-i18n data-i18n-pt="Gerenciei <strong>pipelines de CI/CD</strong> com <strong>Docker</strong>, <strong>GitHub Actions</strong> e notebooks reprodutíveis para rastrear experimentos." data-i18n-mode="html">Managed <strong>CI/CD pipelines</strong> using <strong>Docker</strong>, <strong>GitHub Actions</strong>, and reproducible notebooks for experiment tracking.</li>
                     </ul>
                 </div>
 
                 <div class="experience-item">
                     <div class="exp-header">
-                        <strong>Research Assistant — INESC TEC</strong>
-                    </div>
-                    <div class="exp-meta">Porto, Portugal · Hybrid · Oct 2024 – Present</div>
-                    <p class="exp-desc">Working within the <strong>TRIBE Lab</strong>, focusing on real-time computer vision systems for field robotics in agriculture.</p>
-                    <ul class="exp-list">
-                        <li>Developed and benchmarked detection and segmentation models for vineyard and orchard robots.</li>
-                        <li>Implemented architectures such as <strong>YOLOv11</strong>, <strong>RT-DETR</strong>, <strong>Faster R-CNN</strong>, <strong>Mask R-CNN</strong>, and <strong>Mask2Former</strong> for fruit and foliage segmentation.</li>
-                        <li>Conducted dataset design, annotation pipelines, and performance evaluations under real-world conditions.</li>
-                        <li>Integrated perception systems into robotics pipelines for autonomous decision-making.</li>
-                        <li>Technologies: Python, PyTorch, OpenCV, Detectron2, MMDetection, ROS2, Docker.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <strong>Computer Vision Volunteer — Civil Police of the Federal District (PCDF)</strong>
-                        <a href="https://gitlab.com/lisa-unb/legwoui" target="_blank" class="gl-link" title="GitLab" aria-label="View project on GitLab">
+                        <strong data-i18n data-i18n-pt="Voluntário em Visão Computacional — Polícia Civil do Distrito Federal (PCDF)">Computer Vision Volunteer — Civil Police of the Federal District (PCDF)</strong>
+                        <a href="https://gitlab.com/lisa-unb/legwoui" target="_blank" class="gl-link" title="GitLab" aria-label="View project on GitLab" data-i18n-attrs="aria-label" data-i18n-pt-aria-label="Ver projeto no GitLab">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M22.65 9.39l-1.05-3.23c-.2-.62-1.08-.62-1.28 0L18.34 12H5.66L3.68 6.16c-.2-.62-1.08-.62-1.28 0L1.35 9.39c-.18.52.02 1.09.45 1.4l9.2 6.54c.3.22.71.22 1.01 0l9.2-6.54c.43-.31.62-.88.44-1.4z"/>
                             </svg>
                         </a>
                     </div>
-                    <div class="exp-meta">Brasília, Brazil · Remote · Feb 2024 – Jun 2024</div>
-                    <p class="exp-desc">Research collaboration for forensic analysis and wound classification using computer vision.</p>
+                    <div class="exp-meta" data-i18n data-i18n-pt="Brasília, Brasil · Remoto · Fev 2024 – Jun 2024">Brasília, Brazil · Remote · Feb 2024 – Jun 2024</div>
+                    <p class="exp-desc" data-i18n data-i18n-pt="Colaboração de pesquisa para análise forense e classificação de ferimentos com visão computacional.">Research collaboration for forensic analysis and wound classification using computer vision.</p>
                     <ul class="exp-list">
-                        <li>Built deep learning pipelines for <strong>gunshot wound classification</strong> and medico-legal distance estimation.</li>
-                        <li>Dataset: 2,551 real images from 489 cases (2012–2022).</li>
-                        <li>Augmented dataset with <strong>AutoAlbument</strong>, <strong>SMOTE</strong>, and <strong>GIMP preprocessing</strong>.</li>
+                        <li data-i18n data-i18n-pt="Construí pipelines de deep learning para <strong>classificação de ferimentos por arma de fogo</strong> e estimativa de distância médico-legal." data-i18n-mode="html">Built deep learning pipelines for <strong>gunshot wound classification</strong> and medico-legal distance estimation.</li>
+                        <li data-i18n data-i18n-pt="Dataset: 2.551 imagens reais de 489 casos (2012–2022).">Dataset: 2,551 real images from 489 cases (2012–2022).</li>
+                        <li data-i18n data-i18n-pt="Ampliei o dataset com <strong>AutoAlbument</strong>, <strong>SMOTE</strong> e <strong>pré-processamento no GIMP</strong>." data-i18n-mode="html">Augmented dataset with <strong>AutoAlbument</strong>, <strong>SMOTE</strong>, and <strong>GIMP preprocessing</strong>.</li>
                         <li>Achieved over <strong>92% accuracy</strong> and <strong>94% AUC</strong> using <strong>ResNet</strong>, <strong>DenseNet</strong>, <strong>EfficientNet</strong>, and <strong>Vision Transformers (ViT)</strong>.</li>
                         <li>Developed model evaluation metrics aligned with forensic standards.</li>
                     </ul>
@@ -343,20 +425,20 @@
                     <ul class="exp-list">
                         <li>Built automated pipelines for <strong>video quality metrics</strong> (PSNR, SSIM, VMAF, LPIPS).</li>
                         <li>Designed and trained <strong>CNN and ViT models</strong> to predict human MOS ratings.</li>
-                        <li>Published results at <strong>SIBGRAPI 2022</strong> and other international venues.</li>
+                        <li data-i18n data-i18n-pt="Publiquei resultados no <strong>SIBGRAPI 2022</strong> e em outros eventos internacionais." data-i18n-mode="html">Published results at <strong>SIBGRAPI 2022</strong> and other international venues.</li>
                     </ul>
                 </div>
 
                 <div class="experience-item">
                     <div class="exp-header">
-                        <strong>Engineering Intern — TELEBRAS S.A.</strong>
+                        <strong data-i18n data-i18n-pt="Estagiário de Engenharia — TELEBRAS S.A.">Engineering Intern — TELEBRAS S.A.</strong>
                     </div>
-                    <div class="exp-meta">Brasília, Brazil · Hybrid · Sep 2020 – Feb 2022</div>
-                    <p class="exp-desc">Supported engineering documentation and deployment of telecommunications systems.</p>
+                    <div class="exp-meta" data-i18n data-i18n-pt="Brasília, Brasil · Híbrido · Set 2020 – Fev 2022">Brasília, Brazil · Hybrid · Sep 2020 – Feb 2022</div>
+                    <p class="exp-desc" data-i18n data-i18n-pt="Apoiei documentação de engenharia e implantação de sistemas de telecomunicações.">Supported engineering documentation and deployment of telecommunications systems.</p>
                     <ul class="exp-list">
-                        <li>Conducted network diagnostics and equipment installation.</li>
-                        <li>Participated in system migration projects and infrastructure documentation.</li>
-                        <li>Assisted with telecom equipment configuration and signal verification processes.</li>
+                        <li data-i18n data-i18n-pt="Realizei diagnósticos de rede e instalação de equipamentos.">Conducted network diagnostics and equipment installation.</li>
+                        <li data-i18n data-i18n-pt="Participei de projetos de migração de sistemas e documentação de infraestrutura.">Participated in system migration projects and infrastructure documentation.</li>
+                        <li data-i18n data-i18n-pt="Apoiei configuração de equipamentos de telecom e verificação de sinal.">Assisted with telecom equipment configuration and signal verification processes.</li>
                     </ul>
                 </div>
             </div>
@@ -368,13 +450,13 @@
                 <span class="terminal-btn green"></span>
             </div>
             <div class="terminal-body">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title" data-i18n data-i18n-pt="Contato">Contact</h2>
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <a href="mailto:brunoscholles98@gmail.com" class="contact-item"><strong>Email:</strong> brunoscholles98@gmail.com</a>
-                        <a href="https://linkedin.com/in/bruno-scholles" target="_blank" rel="noopener noreferrer" class="contact-item"><strong>LinkedIn:</strong> linkedin.com/in/bruno-scholles</a>
-                        <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="contact-item"><strong>GitHub:</strong> github.com/BrunoScholles98</a>
-                        <span class="contact-item"><strong>Location:</strong> Porto, Portugal</span>
+                        <a href="mailto:brunoscholles98@gmail.com" class="contact-item"><strong data-i18n data-i18n-pt="E-mail:">Email:</strong> brunoscholles98@gmail.com</a>
+                        <a href="https://linkedin.com/in/bruno-scholles" target="_blank" rel="noopener noreferrer" class="contact-item"><strong data-i18n data-i18n-pt="LinkedIn:">LinkedIn:</strong> linkedin.com/in/bruno-scholles</a>
+                        <a href="https://github.com/BrunoScholles98" target="_blank" rel="noopener noreferrer" class="contact-item"><strong data-i18n data-i18n-pt="GitHub:">GitHub:</strong> github.com/BrunoScholles98</a>
+                        <span class="contact-item"><strong data-i18n data-i18n-pt="Localização:">Location:</strong> Porto, Portugal</span>
                     </div>
                 </div>
             </div>
@@ -384,23 +466,61 @@
     <div class="sidebar-backdrop" data-sidebar-close></div>
 
     <footer class="site-footer">
-        © 2025 Bruno Scholles — All Rights Reserved.
+        <span data-i18n data-i18n-pt="© 2025 Bruno Scholles — Todos os direitos reservados.">© 2025 Bruno Scholles — All Rights Reserved.</span>
     </footer>
 
+    <script type="application/json" id="bio-translations">
+        {
+            "en": {
+                "intro": "Engineer with 4 years of experience in the fields of Computer Vision and Artificial Intelligence. My key strength lies in the ability to bridge diverse scientific knowledge and apply it to real-world challenges, particularly in interdisciplinary projects.\\n\\nMy work focuses on Machine Learning and Deep Learning, with experience in developing both classical models and advanced solutions for computer vision. I am constantly seeking to deepen my knowledge in AI, image and data processing, as well as Big Data technologies.\\n\\nOutside of work, I'm passionate about wildlife photography, especially photographing marmosets (small monkeys native to Brazil) and other animals. I also love nature and enjoy hiking and learning about biology.",
+                "linkStart": "If you'd like to see some of these photos, ",
+                "linkEnd": " to check them out.",
+                "linkLabel": "click here"
+            },
+            "pt": {
+                "intro": "Engenheiro com 4 anos de experiência em Visão Computacional e Inteligência Artificial. Minha principal força é conectar conhecimentos científicos diversos e aplicá-los a desafios reais, especialmente em projetos multidisciplinares.\\n\\nMeu trabalho é focado em Machine Learning e Deep Learning, com experiência tanto em modelos clássicos quanto em soluções avançadas para visão computacional. Estou sempre buscando aprofundar meus conhecimentos em IA, processamento de imagens e dados, além de tecnologias de Big Data.\\n\\nFora do trabalho, sou apaixonado por fotografia de vida selvagem, especialmente por registrar saguis (pequenos macacos do Brasil) e outros animais. Também amo a natureza, faço trilhas e adoro aprender sobre biologia.",
+                "linkStart": "Se quiser ver algumas dessas fotos, ",
+                "linkEnd": " para conferi-las.",
+                "linkLabel": "clique aqui"
+            }
+        }
+    </script>
+
     <script>
-        const bioTextContent = "Engineer with 4 years of experience in the fields of Computer Vision and Artificial Intelligence. My key strength lies in the ability to bridge diverse scientific knowledge and apply it to real-world challenges, particularly in interdisciplinary projects.\n\nMy work focuses on Machine Learning and Deep Learning, with experience in developing both classical models and advanced solutions for computer vision. I am constantly seeking to deepen my knowledge in AI, image and data processing, as well as Big Data technologies.\n\nOutside of work, I'm passionate about wildlife photography, especially photographing marmosets (small monkeys native to Brazil) and other animals. I also love nature and enjoy hiking and learning about biology.";
-        const additionalSentenceStart = "If you'd like to see some of these photos, ";
-        const additionalSentenceEnd = " to check them out.";
+        const bioTranslationsNode = document.getElementById('bio-translations');
+        let bioTranslations = {
+            en: { intro: '', linkStart: '', linkEnd: '', linkLabel: '' },
+            pt: { intro: '', linkStart: '', linkEnd: '', linkLabel: '' },
+        };
+
+        if (bioTranslationsNode) {
+            try {
+                const parsedTranslations = JSON.parse(bioTranslationsNode.textContent.trim());
+                if (parsedTranslations) {
+                    bioTranslations = parsedTranslations;
+                }
+            } catch (error) {
+                console.error('Failed to parse bio translations:', error);
+            }
+        }
+
+        let bioTextContent = (bioTranslations.en && bioTranslations.en.intro) || '';
+        let additionalSentenceStart = (bioTranslations.en && bioTranslations.en.linkStart) || '';
+        let additionalSentenceEnd = (bioTranslations.en && bioTranslations.en.linkEnd) || '';
+        let additionalLinkLabel = (bioTranslations.en && bioTranslations.en.linkLabel) || '';
+
         const bioElement = document.getElementById('bio-text');
         const cursorElement = document.getElementById('cursor');
         const typingSpeed = 20;
         const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let hasLanguageSynced = false;
+        let pageLoaded = false;
 
         let index = 0;
         let hasFinalizedBio = false;
 
-        function finalizeBio() {
-            if (hasFinalizedBio) {
+        function finalizeBio(force = false) {
+            if (hasFinalizedBio && !force) {
                 return;
             }
 
@@ -414,7 +534,7 @@
 
             const link = document.createElement('a');
             link.href = "photography.html";
-            link.textContent = "click here";
+            link.textContent = additionalLinkLabel || 'click here';
             bioElement.appendChild(link);
 
             bioElement.appendChild(document.createTextNode(additionalSentenceEnd));
@@ -450,14 +570,50 @@
 
         motionPreference.addEventListener('change', (event) => {
             if (event.matches) {
-                finalizeBio();
-            } else {
+                finalizeBio(true);
+            } else if (pageLoaded) {
                 startTyping();
             }
         });
 
+        const syncBioCopy = (lang) => {
+            const pack = bioTranslations[lang] || bioTranslations.en || {};
+            bioTextContent = pack.intro || '';
+            additionalSentenceStart = pack.linkStart || '';
+            additionalSentenceEnd = pack.linkEnd || '';
+            additionalLinkLabel = pack.linkLabel || '';
+
+            if (hasFinalizedBio) {
+                finalizeBio(true);
+            }
+        };
+
+        const trySubscribeToLanguage = () => {
+            if (window.SiteLanguage && typeof window.SiteLanguage.subscribe === 'function') {
+                window.SiteLanguage.subscribe((lang) => {
+                    syncBioCopy(lang);
+                    hasLanguageSynced = true;
+
+                });
+                return true;
+            }
+
+            return false;
+        };
+
+        if (!trySubscribeToLanguage()) {
+            window.addEventListener('site-language-ready', () => {
+                trySubscribeToLanguage();
+            }, { once: true });
+            syncBioCopy('en');
+            hasLanguageSynced = true;
+        }
+
         window.addEventListener('load', () => {
-            startTyping();
+            pageLoaded = true;
+            if (!hasFinalizedBio) {
+                startTyping();
+            }
         });
 
         const sidebar = document.getElementById('sidebar-nav');
@@ -519,6 +675,56 @@
         }
 
         setSidebarState(false);
+
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const sections = Array.from(document.querySelectorAll('main .terminal-box'));
+
+        const setActiveLink = (sectionId) => {
+            if (!sectionId) {
+                return;
+            }
+
+            sidebarLinks.forEach((link) => {
+                const linkMatches = link.getAttribute('href') === `#${sectionId}`;
+                link.classList.toggle('active', linkMatches);
+
+                if (linkMatches) {
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        };
+
+        const getActiveSectionId = () => {
+            const focusLine = window.scrollY + window.innerHeight * 0.35;
+            let activeId = sections[0]?.id;
+
+            sections.forEach((section) => {
+                if (focusLine >= section.offsetTop - 10) {
+                    activeId = section.id;
+                }
+            });
+
+            return activeId;
+        };
+
+        const updateActiveLink = () => setActiveLink(getActiveSectionId());
+
+        let ticking = false;
+        const requestUpdate = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateActiveLink();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        window.addEventListener('resize', requestUpdate);
+        updateActiveLink();
     </script>
 </body>
 </html>
