@@ -6,6 +6,15 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta property="og:title" content="Bruno Scholles — AI &amp; Computer Vision Engineer">
+    <meta property="og:description" content="Personal webpage &amp; portfolio showcasing my work in AI, Machine Learning and Computer Vision.">
+    <meta property="og:image" content="https://brunoscholles98.github.io/profile.jpg">
+    <meta property="og:url" content="https://brunoscholles98.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bruno Scholles — AI &amp; Computer Vision Engineer">
+    <meta name="twitter:description" content="Personal webpage &amp; portfolio showcasing my work in AI, Machine Learning and Computer Vision.">
+    <meta name="twitter:image" content="https://brunoscholles98.github.io/profile.jpg">
     <script>
         // Reload the page with a cache-busting query when a new release is detected.
         (function () {
@@ -247,6 +256,9 @@
                         <div class="profile-line profile-location" data-i18n data-i18n-pt="Baseado em Portugal 🇵🇹">Based in Portugal 🇵🇹</div>
                     </div>
                 </div>
+                <div class="profile-actions">
+                    <button class="cv-button" type="button" data-i18n data-i18n-pt="Currículo">Curriculum</button>
+                </div>
                 <div class="section-divider"></div>
                 <h2 class="section-title" data-i18n data-i18n-pt="Sobre mim">About Me</h2>
                 <p class="bio-text" id="bio-text"></p>
@@ -379,7 +391,10 @@
                 <span class="terminal-btn green"></span>
             </div>
             <div class="terminal-body">
-                <h2 class="section-title" data-i18n data-i18n-pt="Experiência Profissional">Professional Experience</h2>
+                <header class="section-header">
+                    <h2 class="section-title" data-i18n data-i18n-pt="Experiência Profissional">Professional Experience</h2>
+                    <a class="section-cta" href="projects.html" data-i18n data-i18n-pt="Ver meus projetos">Explore projects</a>
+                </header>
                 
                 <div class="experience-item">
                     <div class="exp-header">
@@ -532,6 +547,22 @@
     <footer class="site-footer">
         <span data-i18n data-i18n-pt="© 2025 Bruno Scholles — Todos os direitos reservados.">© 2025 Bruno Scholles — All Rights Reserved.</span>
     </footer>
+
+    <div class="cv-overlay" id="cv-overlay" aria-hidden="true" tabindex="-1">
+        <div class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+            <div class="cv-modal-header">
+                <div>
+                    <h3 class="cv-modal-title" id="cv-modal-title" data-i18n data-i18n-pt="Currículo">Curriculum</h3>
+                    <p class="cv-modal-subtitle" data-i18n data-i18n-pt="PDF do meu currículo em inglês">English CV preview</p>
+                </div>
+                <div class="cv-modal-actions">
+                    <a class="cv-download" href="other_files/CV_BrunoScholles_English.pdf" target="_blank" rel="noopener" download data-i18n data-i18n-pt="Baixar">Download</a>
+                    <button class="cv-close" type="button" data-i18n data-i18n-pt="Fechar">Close</button>
+                </div>
+            </div>
+            <iframe class="cv-document" src="other_files/CV_BrunoScholles_English.pdf" title="Curriculum PDF" loading="lazy"></iframe>
+        </div>
+    </div>
 
     <script type="application/json" id="bio-translations">
         {
@@ -789,6 +820,40 @@
         window.addEventListener('scroll', requestUpdate, { passive: true });
         window.addEventListener('resize', requestUpdate);
         updateActiveLink();
+    </script>
+    <script>
+        (function () {
+            const cvButton = document.querySelector('.cv-button');
+            const overlay = document.getElementById('cv-overlay');
+            const closeTrigger = overlay?.querySelector('.cv-close');
+
+            if (!cvButton || !overlay) {
+                return;
+            }
+
+            const setVisibility = (visible) => {
+                overlay.classList.toggle('is-visible', visible);
+                overlay.setAttribute('aria-hidden', visible ? 'false' : 'true');
+                if (visible) {
+                    overlay.focus();
+                }
+            };
+
+            cvButton.addEventListener('click', () => setVisibility(true));
+            closeTrigger?.addEventListener('click', () => setVisibility(false));
+
+            overlay.addEventListener('click', (event) => {
+                if (event.target === overlay) {
+                    setVisibility(false);
+                }
+            });
+
+            window.addEventListener('keyup', (event) => {
+                if (event.key === 'Escape' && overlay.classList.contains('is-visible')) {
+                    setVisibility(false);
+                }
+            });
+        })();
     </script>
 </body>
 </html>
