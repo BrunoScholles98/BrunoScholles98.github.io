@@ -6,8 +6,69 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <script>
+        // Reload the page with a cache-busting query when a new release is detected.
+        (function () {
+            const VERSION_FILE = 'version.txt';
+            const STORAGE_KEY = 'preferred-site-version';
+            const CACHE_PARAM = 'cb';
+
+            const buildUrl = (params) => {
+                const search = params.toString();
+                const hash = window.location.hash || '';
+                return `${window.location.pathname}${search ? `?${search}` : ''}${hash}`;
+            };
+
+            const cleanCacheParam = () => {
+                const params = new URLSearchParams(window.location.search);
+                if (!params.has(CACHE_PARAM)) {
+                    return;
+                }
+                params.delete(CACHE_PARAM);
+                window.history.replaceState({}, '', buildUrl(params));
+            };
+
+            const checkVersion = async () => {
+                try {
+                    const response = await fetch(`${VERSION_FILE}?_=${Date.now()}`, {
+                        cache: 'no-store',
+                        credentials: 'same-origin',
+                    });
+
+                    if (!response.ok) {
+                        return;
+                    }
+
+                    const version = (await response.text()).trim();
+                    if (!version) {
+                        return;
+                    }
+
+                    const storedVersion = localStorage.getItem(STORAGE_KEY);
+                    if (storedVersion === version) {
+                        cleanCacheParam();
+                        return;
+                    }
+
+                    localStorage.setItem(STORAGE_KEY, version);
+                    const params = new URLSearchParams(window.location.search);
+                    if (params.get(CACHE_PARAM) === version) {
+                        window.location.reload();
+                        return;
+                    }
+
+                    params.set(CACHE_PARAM, version);
+                    window.location.replace(buildUrl(params));
+                } catch (error) {
+                    // Swallow fetch errors so the page can continue loading.
+                }
+            };
+
+            checkVersion();
+        })();
+    </script>
     <title data-i18n data-i18n-pt="Publicações Científicas - Bruno Scholles">Scientific Publications - Bruno Scholles</title>
-    <link rel="stylesheet" href="styles.css?v=20240609" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css?v=20240612" fetchpriority="high">
     <script>
         (function() {
             try {
@@ -20,8 +81,8 @@
             }
         })();
     </script>
-    <script src="theme.js?v=20240609" defer></script>
-    <script src="language.js?v=20240609" defer></script>
+    <script src="theme.js?v=20240612" defer></script>
+    <script src="language.js?v=20240612" defer></script>
 </head>
 <body>
     <nav class="sticky-nav">
