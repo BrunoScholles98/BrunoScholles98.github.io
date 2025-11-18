@@ -68,9 +68,13 @@
         document.querySelectorAll('.language-switch').forEach((button) => {
             const enLabel = button.dataset.labelEn || 'Switch to Portuguese';
             const ptLabel = button.dataset.labelPt || 'Alternar para inglês';
+            const enTooltip = button.dataset.tooltipEn || 'English';
+            const ptTooltip = button.dataset.tooltipPt || 'Português';
             const nextLanguage = currentLanguage === 'pt' ? 'en' : 'pt';
             button.setAttribute('aria-label', nextLanguage === 'pt' ? enLabel : ptLabel);
             button.setAttribute('aria-pressed', currentLanguage === 'pt' ? 'true' : 'false');
+            const tooltip = currentLanguage === 'pt' ? ptTooltip : enTooltip;
+            button.setAttribute('data-tooltip', tooltip);
         });
     };
 
@@ -151,8 +155,7 @@
 
     const init = () => {
         initTextNodes();
-        const stored = getStoredLanguage();
-        applyLanguage(stored || DEFAULT_LANGUAGE, false);
+        applyLanguage(DEFAULT_LANGUAGE, false);
         initSwitches();
     };
 
